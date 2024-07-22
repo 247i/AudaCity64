@@ -2,10 +2,9 @@ $nyquist plug-in
 $version 4
 $type analyze
 $name (_ "Beat Finder")
-$manpage "Beat_Finder"
 $debugbutton false
 $author (_ "Audacity")
-$release 2.3.2-1
+$release 2.3.2-2
 $copyright (_ "GNU General Public License v2.0")
 
 ;; License: GPL v2
@@ -15,9 +14,9 @@ $copyright (_ "GNU General Public License v2.0")
 ;; https://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference
 
 
-$control thresval (_ "Threshold Percentage") int "" 65 5 100
+$control THRESVAL (_ "Threshold Percentage") int "" 65 5 100
 
-(setf threshold (/ thresval 100.0))
+(setf threshold (/ THRESVAL 100.0))
 
 (defun mix-to-mono (sig)
   (if (arrayp sig)
